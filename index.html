@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <div class="container" align="center">
+       <h1>Photo Gallery</h1>
+       <div class="thumbnails" align="center">
+           <img onmouseover="preview.src=img1.src"name ="img1" class="thumbnail"src="images/iceland.jpg" alt="">
+           <img onmouseover="preview.src=img2.src" name ="img2" class="thumbnail" src="images/night.jpg" alt="">
+           <img onmouseover="preview.src=img3.src"name ="img3" class="thumbnail" src="images/sunset.jpg" alt="">
+           <img onmouseover="preview.src=img4.src"name ="img4" class="thumbnail" src="images/unique.jpg" alt="">
+           <img onmouseover="preview.src=img5.src" name ="img5" class="thumbnail" src="images/universe.jpg" alt="">
+       </div>
+       <div class="preview" align="center">
+           <img id = "preview-img" name="preview" src="images/night.jpg" alt="">
+       </div>
+    </div>
+
+    <script>
+      var previewImg = document.getElementById("preview-img");
+      var smallImg = document.getElementsByClassName("thumbnail");
+
+      smallImg[0].onclick = function () {
+        previewImg.src = smallImg[0].src;
+      };
+      smallImg[1].onclick = function () {
+        previewImg.src = smallImg[1].src;
+      };
+      smallImg[2].onclick = function () {
+        previewImg.src = smallImg[2].src;
+      };
+      smallImg[3].onclick = function () {
+        previewImg.src = smallImg[3].src;
+      };
+      smallImg[4].onclick = function () {
+        previewImg.src = smallImg[4].src;
+      };
+    </script>
+</body>
+</html>
